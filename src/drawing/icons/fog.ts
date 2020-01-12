@@ -19,8 +19,6 @@ export function iconFog(
 
   ctx.strokeStyle = (color as IElementColors).fog || (color as string);
   ctx.lineWidth = strokeWidth;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   const gapBottom = height * 0.936;
 

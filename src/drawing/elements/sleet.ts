@@ -13,8 +13,6 @@ export function sleet(
 
   ctx.strokeStyle = color;
   ctx.lineWidth = stroke * 0.5;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   const gapBetween = circleWidth * 0.1875;
 

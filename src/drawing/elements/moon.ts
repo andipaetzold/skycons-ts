@@ -18,8 +18,6 @@ export function moon(
 
   ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   cx += c * b;
   ctx.beginPath();

@@ -26,8 +26,6 @@ export function swoosh(
 
   ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   if (a < 1) {
     ctx.beginPath();

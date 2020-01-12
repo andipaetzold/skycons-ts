@@ -29,8 +29,6 @@ export function snow(
 
   ctx.strokeStyle = color;
   ctx.lineWidth = stroke * 0.5;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   for (let i = 0; i < 4; ++i) {
     const percentage = (time + i / 4) % 1;

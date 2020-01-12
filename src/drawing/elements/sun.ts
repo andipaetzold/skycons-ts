@@ -14,8 +14,6 @@ export function sun(
 
   ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
 
   const radius = circleWidth * 0.25 - stroke * 0.5;
 

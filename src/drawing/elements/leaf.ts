@@ -19,8 +19,6 @@ export function leaf(
   ctx.fillStyle = color;
   ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
   ctx.beginPath();
   ctx.arc(x, y, a, d, d + Math.PI, false);
   ctx.arc(x - b * e, y - b * f, c, d + Math.PI, d, false);
