@@ -1,18 +1,26 @@
 import { STROKE, TAU } from "../../constants";
+import { IElementColors } from "../../skycons";
 import { fogbank } from "../elements/fogbank";
 import { line } from "../elements/line";
 
-export function iconFog(ctx: CanvasRenderingContext2D, time: number): void {
+export function iconFog(
+  ctx: CanvasRenderingContext2D,
+  time: number,
+  color: string | IElementColors
+): void {
   const width = ctx.canvas.width;
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
   const strokeWidth = shorter * STROKE;
 
-  fogbank(ctx, time, width * 0.5, height * 0.32, shorter * 0.75, strokeWidth);
+  fogbank(ctx, time, width * 0.5, height * 0.32, shorter * 0.75, strokeWidth, (color as IElementColors).light_cloud || (color as string));
 
   time /= 5000;
 
+  ctx.strokeStyle = (color as IElementColors).fog || (color as string);
   ctx.lineWidth = strokeWidth;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
 
   const gapBottom = height * 0.936;
 

@@ -6,7 +6,8 @@ export function cloud(
   cx: number,
   cy: number,
   cw: number,
-  stroke: number
+  stroke: number,
+  color: string
 ): void {
   time /= 30000;
 
@@ -15,6 +16,7 @@ export function cloud(
   const c = cw * 0.24;
   const d = cw * 0.28;
 
+  ctx.fillStyle = color;
   puffs(ctx, time, cx, cy, a, b, c, d);
   ctx.globalCompositeOperation = "destination-out";
   puffs(ctx, time, cx, cy, a, b, c - stroke, d - stroke);

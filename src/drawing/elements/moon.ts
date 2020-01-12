@@ -6,7 +6,8 @@ export function moon(
   cx: number,
   cy: number,
   cw: number,
-  stroke: number
+  stroke: number,
+  color: string
 ): void {
   time /= 15000;
 
@@ -15,7 +16,10 @@ export function moon(
   const c = Math.cos(time * TAU);
   const p = (c * TAU) / -16;
 
+  ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
 
   cx += c * b;
   ctx.beginPath();
