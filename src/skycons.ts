@@ -3,23 +3,20 @@ import { DrawFunction } from "./DrawFunction";
 import { getIconDrawingFunctionByName, IconKey } from "./icons";
 
 export interface IElementColors {
-  main: string;
-  moon: string;
-  fog: string;
-  light_cloud: string;
   cloud: string;
-  snow: string;
-  sleet: string;
+  fog: string;
   leaf: string;
+  light_cloud: string;
+  moon: string;
   rain: string;
+  sleet: string;
+  snow: string;
   sun: string;
 }
 
 export interface IConstructorOptions {
-  monochrome?: boolean;
-  color?: string;
-  colors?: IElementColors;
-  resizeClear: boolean;
+  color?: string | boolean | Partial<IElementColors>;
+  resizeClear?: boolean;
 }
 
 export interface IIconElement {
@@ -30,38 +27,46 @@ export interface IIconElement {
 
 export class Skycons {
   private interval: number | null = null;
+  private readonly resizeClear: boolean;
   private readonly list: IIconElement[] = [];
 
-  private readonly opts: IConstructorOptions;
+  private color: IElementColors;
 
-  private color: string | IElementColors;
+  public constructor(opts: IConstructorOptions = {}) {
+    this.resizeClear = opts.resizeClear || false;
 
-  public constructor(opts?: IConstructorOptions) {
-    this.opts = {
-      color: "black",
-      resizeClear: false,
-      monochrome: true,
-      ...opts
+    const color = opts.color || "black";
+    const monochrome = (typeof color === "string");
+
+    this.color = {
+      cloud: monochrome
+        ? (color as string)
+        : (color as IElementColors).cloud || "#666",
+      fog: monochrome
+        ? (color as string)
+        : (color as IElementColors).fog || "#CCC",
+      leaf: monochrome
+        ? (color as string)
+        : (color as IElementColors).leaf || "#2C5228",
+      light_cloud: monochrome
+        ? (color as string)
+        : (color as IElementColors).light_cloud || "#888",
+      moon: monochrome
+        ? (color as string)
+        : (color as IElementColors).moon || "#353545",
+      rain: monochrome
+        ? (color as string)
+        : (color as IElementColors).rain || "#7FDBFF",
+      sleet: monochrome
+        ? (color as string)
+        : (color as IElementColors).sleet || "#C2EEFF",
+      snow: monochrome
+        ? (color as string)
+        : (color as IElementColors).snow || "#C2EEFF",
+      sun: monochrome
+        ? (color as string)
+        : (color as IElementColors).sun || "#FFDC00"
     };
-    const optColors = this.opts.colors;
-    const colors = {
-      main        : "#111",
-      moon        : "#353545",
-      fog         : "#CCC",
-      light_cloud : "#888",
-      cloud       : "#666",
-      snow        : "#C2EEFF",
-      sleet       : "#C2EEFF",
-      leaf        : "#2C5228",
-      rain        : "#7FDBFF",
-      sun         : "#FFDC00",
-      ...optColors
-    };
-    if(this.opts.monochrome) {
-      this.color = (opts ? opts.color : undefined) || colors.main;
-    } else {
-      this.color = colors;
-    }
   }
 
   public add(elementOrId: string | HTMLCanvasElement, draw: IconKey) {
@@ -108,7 +113,7 @@ export class Skycons {
   public draw(obj: IIconElement, time: number) {
     const canvas = obj.context.canvas;
 
-    if (this.opts.resizeClear) {
+    if (this.resizeClear) {
       canvas.width = canvas.width;
     } else {
       obj.context.clearRect(0, 0, canvas.width, canvas.height);

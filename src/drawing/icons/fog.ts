@@ -6,18 +6,18 @@ import { line } from "../elements/line";
 export function iconFog(
   ctx: CanvasRenderingContext2D,
   time: number,
-  color: string | IElementColors
+  color: IElementColors
 ): void {
   const width = ctx.canvas.width;
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
   const strokeWidth = shorter * STROKE;
 
-  fogbank(ctx, time, width * 0.5, height * 0.32, shorter * 0.75, strokeWidth, (color as IElementColors).light_cloud || (color as string));
+  fogbank(ctx, time, width * 0.5, height * 0.32, shorter * 0.75, strokeWidth, color.light_cloud);
 
   time /= 5000;
 
-  ctx.strokeStyle = (color as IElementColors).fog || (color as string);
+  ctx.strokeStyle = color.fog;
   ctx.lineWidth = strokeWidth;
 
   const gapBottom = height * 0.936;

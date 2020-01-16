@@ -6,7 +6,7 @@ import { moon } from "../elements/moon";
 export function iconPartlyCloudyNight(
   ctx: CanvasRenderingContext2D,
   time: number,
-  color: string | IElementColors
+  color: IElementColors
 ): void {
   const width = ctx.canvas.width;
   const height = ctx.canvas.height;
@@ -19,7 +19,7 @@ export function iconPartlyCloudyNight(
     height * 0.375,
     shorter * 0.75,
     shorter * STROKE,
-    (color as IElementColors).moon || (color as string)
+    color.moon
   );
   cloud(
     ctx,
@@ -28,6 +28,6 @@ export function iconPartlyCloudyNight(
     height * 0.625,
     shorter * 0.75,
     shorter * STROKE,
-    (color as IElementColors).light_cloud || (color as string)
+    color.light_cloud
   );
 }
