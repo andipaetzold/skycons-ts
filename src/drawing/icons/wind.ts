@@ -11,6 +11,26 @@ export function iconWind(
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
 
-  swoosh(ctx, time, width * 0.5, height * 0.5, shorter, shorter * STROKE, 0, 2, color.leaf);
-  swoosh(ctx, time, width * 0.5, height * 0.5, shorter, shorter * STROKE, 1, 2, color.leaf);
+  swoosh(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.5,
+    shorter,
+    shorter * STROKE,
+    0,
+    2,
+    color.leaf
+  );
+  swoosh(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.5,
+    shorter,
+    shorter * STROKE,
+    1,
+    2,
+    color.leaf
+  );
 }

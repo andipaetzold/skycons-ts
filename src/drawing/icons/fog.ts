@@ -13,7 +13,15 @@ export function iconFog(
   const shorter = Math.min(width, height);
   const strokeWidth = shorter * STROKE;
 
-  fogbank(ctx, time, width * 0.5, height * 0.32, shorter * 0.75, strokeWidth, color.light_cloud);
+  fogbank(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.32,
+    shorter * 0.75,
+    strokeWidth,
+    color.light_cloud
+  );
 
   time /= 5000;
 

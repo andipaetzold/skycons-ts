@@ -21,7 +21,7 @@ export function rain(
   let y;
 
   ctx.fillStyle = color;
-  for (i = 4; i--;) {
+  for (i = 4; i--; ) {
     p = (time + i / 4) % 1;
     x = cx + ((i - 1.5) / 1.5) * (i === 1 || i === 2 ? -1 : 1) * a;
     y = cy + p * p * cw;

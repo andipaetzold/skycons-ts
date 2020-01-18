@@ -12,6 +12,22 @@ export function iconSleet(
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
 
-  sleet(ctx, time, width * 0.5, height * 0.37, shorter * 0.9, shorter * STROKE, color.sleet);
-  cloud(ctx, time, width * 0.5, height * 0.37, shorter * 0.9, shorter * STROKE, color.cloud);
+  sleet(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.37,
+    shorter * 0.9,
+    shorter * STROKE,
+    color.sleet
+  );
+  cloud(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.37,
+    shorter * 0.9,
+    shorter * STROKE,
+    color.cloud
+  );
 }

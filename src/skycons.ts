@@ -36,7 +36,7 @@ export class Skycons {
     this.resizeClear = opts.resizeClear || false;
 
     const color = opts.color || "black";
-    const monochrome = (typeof color === "string");
+    const monochrome = typeof color === "string";
 
     this.color = {
       cloud: monochrome

@@ -12,6 +12,22 @@ export function iconSnow(
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
 
-  snow(ctx, time, width * 0.5, height * 0.37, shorter * 0.9, shorter * STROKE, color.snow);
-  cloud(ctx, time, width * 0.5, height * 0.37, shorter * 0.9, shorter * STROKE, color.cloud);
+  snow(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.37,
+    shorter * 0.9,
+    shorter * STROKE,
+    color.snow
+  );
+  cloud(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.37,
+    shorter * 0.9,
+    shorter * STROKE,
+    color.cloud
+  );
 }

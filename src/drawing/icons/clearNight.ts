@@ -11,5 +11,13 @@ export function iconClearNight(
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
 
-  moon(ctx, time, width * 0.5, height * 0.5, shorter, shorter * STROKE, color.moon);
+  moon(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.5,
+    shorter,
+    shorter * STROKE,
+    color.moon
+  );
 }

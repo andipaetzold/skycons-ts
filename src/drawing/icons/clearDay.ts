@@ -11,5 +11,13 @@ export function iconClearDay(
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
 
-  sun(ctx, time, width * 0.5, height * 0.5, shorter, shorter * STROKE, color.sun);
+  sun(
+    ctx,
+    time,
+    width * 0.5,
+    height * 0.5,
+    shorter,
+    shorter * STROKE,
+    color.sun
+  );
 }
