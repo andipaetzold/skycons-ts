@@ -7,7 +7,8 @@ export function snow(
   gapLeft: number,
   gapTop: number,
   maxGapBetween: number,
-  stroke: number
+  stroke: number,
+  color: string
 ): void {
   time /= 3000;
 
@@ -26,6 +27,7 @@ export function snow(
   const line3X = Math.cos(angle3) * lineLength;
   const line3Y = Math.sin(angle3) * lineLength;
 
+  ctx.strokeStyle = color;
   ctx.lineWidth = stroke * 0.5;
 
   for (let i = 0; i < 4; ++i) {

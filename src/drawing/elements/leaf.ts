@@ -6,7 +6,8 @@ export function leaf(
   x: number,
   y: number,
   cw: number,
-  stroke: number
+  stroke: number,
+  color: string
 ): void {
   const a = cw / 8;
   const b = a / 3;
@@ -15,6 +16,8 @@ export function leaf(
   const e = Math.cos(d);
   const f = Math.sin(d);
 
+  ctx.fillStyle = color;
+  ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
   ctx.beginPath();
   ctx.arc(x, y, a, d, d + Math.PI, false);

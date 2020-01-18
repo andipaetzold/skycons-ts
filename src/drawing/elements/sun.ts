@@ -7,10 +7,12 @@ export function sun(
   circleX: number,
   circleY: number,
   circleWidth: number,
-  stroke: number
+  stroke: number,
+  color: string
 ): void {
   time /= 120000;
 
+  ctx.strokeStyle = color;
   ctx.lineWidth = stroke;
 
   const radius = circleWidth * 0.25 - stroke * 0.5;
