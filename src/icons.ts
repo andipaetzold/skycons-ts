@@ -53,6 +53,6 @@ export function getIconDrawingFunctionByName(key: IconKey): DrawFunction {
   if (drawFn) {
     return drawFn;
   } else {
-    throw new Error("Invalid icon 'name'.");
+    throw new Error(`Invalid icon '${key}'.`);
   }
 }
