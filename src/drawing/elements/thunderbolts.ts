@@ -1,10 +1,11 @@
 export function thunderbolts(
-    ctx: CanvasRenderingContext2D,
-    time: number,
-    cx: number,
-    cy: number,
-    cw: number,
-    color: string) {
+  ctx: CanvasRenderingContext2D,
+  time: number,
+  cx: number,
+  cy: number,
+  cw: number,
+  color: string
+) {
   time /= 1000;
 
   const alpha = 1 - (time % 1);

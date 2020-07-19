@@ -1,7 +1,7 @@
 import { IElementColors } from "../../skycons";
-import { cloud } from '../elements/cloud';
-import { thunderbolts } from '../elements/thunderbolts';
-import { STROKE } from '../../constants';
+import { cloud } from "../elements/cloud";
+import { thunderbolts } from "../elements/thunderbolts";
+import { STROKE } from "../../constants";
 
 export function iconThunderRain(
   ctx: CanvasRenderingContext2D,

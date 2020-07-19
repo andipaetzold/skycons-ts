@@ -13,9 +13,11 @@ export function hail(
 
   ctx.fillStyle = color;
 
-  for(let i = 8; i--; ) {
+  for (let i = 8; i--; ) {
     const p = (time + i / 8) % 1;
-    const x = cx + ((i - 3) / 3) * (i === 1 || i === 3 || i === 4 || i === 6 ? -1 : 1) * a;
+    const x =
+      cx +
+      ((i - 3) / 3) * (i === 1 || i === 3 || i === 4 || i === 6 ? -1 : 1) * a;
     const y = cy + p * p * cw;
     ctx.beginPath();
     ctx.moveTo(x, y);

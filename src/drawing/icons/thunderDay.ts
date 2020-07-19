@@ -2,7 +2,7 @@ import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
 import { cloud } from "../elements/cloud";
 import { sun } from "../elements/sun";
-import { thunderbolts } from '../elements/thunderbolts';
+import { thunderbolts } from "../elements/thunderbolts";
 
 export function iconThunderDay(
   ctx: CanvasRenderingContext2D,

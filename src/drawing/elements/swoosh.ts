@@ -11,7 +11,7 @@ export function swoosh(
   index: number,
   total: number,
   color: string,
-  leafColor: string,
+  leafColor: string
 ): void {
   time /= 2500;
 

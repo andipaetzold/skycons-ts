@@ -1,7 +1,7 @@
 import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
 import { cloud } from "../elements/cloud";
-import { snow } from '../elements/snow';
+import { snow } from "../elements/snow";
 import { sun } from "../elements/sun";
 
 export function iconSnowDay(

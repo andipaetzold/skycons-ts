@@ -2,7 +2,7 @@ import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
 import { cloud } from "../elements/cloud";
 import { moon } from "../elements/moon";
-import { rain } from '../elements/rain';
+import { rain } from "../elements/rain";
 
 export function iconRainNight(
   ctx: CanvasRenderingContext2D,

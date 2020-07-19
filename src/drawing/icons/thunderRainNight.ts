@@ -2,8 +2,8 @@ import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
 import { cloud } from "../elements/cloud";
 import { moon } from "../elements/moon";
-import { rain } from '../elements/rain';
-import { thunderbolts } from '../elements/thunderbolts';
+import { rain } from "../elements/rain";
+import { thunderbolts } from "../elements/thunderbolts";
 
 export function iconThunderRainNight(
   ctx: CanvasRenderingContext2D,

@@ -1,7 +1,7 @@
 import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
-import { cloud } from '../elements/cloud';
-import { hail } from '../elements/hail';
+import { cloud } from "../elements/cloud";
+import { hail } from "../elements/hail";
 
 export function iconHail(
   ctx: CanvasRenderingContext2D,
@@ -11,7 +11,7 @@ export function iconHail(
   const width = ctx.canvas.width;
   const height = ctx.canvas.height;
   const shorter = Math.min(width, height);
-  
+
   hail(
     ctx,
     time,

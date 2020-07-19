@@ -1,9 +1,9 @@
 import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
 import { cloud } from "../elements/cloud";
-import { rain } from '../elements/rain';
+import { rain } from "../elements/rain";
 import { sun } from "../elements/sun";
-import { thunderbolts } from '../elements/thunderbolts';
+import { thunderbolts } from "../elements/thunderbolts";
 
 export function iconThunderRainDay(
   ctx: CanvasRenderingContext2D,
@@ -40,7 +40,7 @@ export function iconThunderRainDay(
     shorter * STROKE * 0.9,
     color.rain
   );
-  
+
   cloud(
     ctx,
     time,

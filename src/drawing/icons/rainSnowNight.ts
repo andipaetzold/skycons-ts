@@ -1,9 +1,9 @@
 import { STROKE } from "../../constants";
 import { IElementColors } from "../../skycons";
 import { cloud } from "../elements/cloud";
-import { moon } from '../elements/moon';
-import { rain } from '../elements/rain';
-import { snow } from '../elements/snow';
+import { moon } from "../elements/moon";
+import { rain } from "../elements/rain";
+import { snow } from "../elements/snow";
 
 export function iconRainSnowNight(
   ctx: CanvasRenderingContext2D,
