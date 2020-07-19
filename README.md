@@ -1,5 +1,6 @@
 [![CircleCI](https://circleci.com/gh/andipaetzold/skycons-ts/tree/master.svg?style=svg)](https://circleci.com/gh/andipaetzold/skycons-ts/tree/master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/186de4f7aa2e0aab2d24/maintainability)](https://codeclimate.com/github/andipaetzold/skycons-ts/maintainability)
+[![Downloads](https://img.shields.io/npm/dm/skycons-ts)](https://www.npmjs.com/package/skycons-ts)
+[![Version](https://img.shields.io/npm/v/skycons-ts.svg)](https://www.npmjs.com/package/skycons-ts)
 
 # Skycons for TypeScript
 
