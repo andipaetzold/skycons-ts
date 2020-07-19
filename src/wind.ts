@@ -127,7 +127,7 @@ export const WIND_PATHS: [number[], number[]] = [
     0.7147,
     0.163,
     0.75,
-    0.18
+    0.18,
   ],
   [
     -0.75,
@@ -193,11 +193,11 @@ export const WIND_PATHS: [number[], number[]] = [
     0.6994,
     -0.138,
     0.75,
-    -0.14
-  ]
+    -0.14,
+  ],
 ];
 
 export const WIND_OFFSETS = [
   { start: 0.36, end: 0.11 },
-  { start: 0.56, end: 0.16 }
+  { start: 0.56, end: 0.16 },
 ];

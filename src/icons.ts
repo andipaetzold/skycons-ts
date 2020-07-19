@@ -32,7 +32,7 @@ export enum ICON {
   RAIN = "rain",
   SLEET = "sleet",
   SNOW = "snow",
-  WIND = "wind"
+  WIND = "wind",
 }
 
 const iconDrawFunctionMap = new Map<IconKey, DrawFunction>([
@@ -45,7 +45,7 @@ const iconDrawFunctionMap = new Map<IconKey, DrawFunction>([
   ["rain", iconRain],
   ["sleet", iconSleet],
   ["snow", iconSnow],
-  ["wind", iconWind]
+  ["wind", iconWind],
 ]);
 
 export function getIconDrawingFunctionByName(key: IconKey): DrawFunction {

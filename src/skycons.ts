@@ -65,7 +65,7 @@ export class Skycons {
         : (color as IElementColors).snow || "#C2EEFF",
       sun: monochrome
         ? (color as string)
-        : (color as IElementColors).sun || "#FFDC00"
+        : (color as IElementColors).sun || "#FFDC00",
     };
   }
 
@@ -83,7 +83,7 @@ export class Skycons {
     const obj: IIconElement = {
       context: ctx,
       drawing: getIconDrawingFunctionByName(draw),
-      element: canvas
+      element: canvas,
     };
 
     this.list.push(obj);
@@ -93,7 +93,7 @@ export class Skycons {
   public set(elementOrId: string | HTMLCanvasElement, draw: IconKey) {
     const canvas = this.getCanvas(elementOrId);
 
-    const obj = this.list.find(o => o.element === canvas);
+    const obj = this.list.find((o) => o.element === canvas);
     if (obj) {
       obj.drawing = getIconDrawingFunctionByName(draw);
       this.draw(obj, KEYFRAME);
@@ -104,7 +104,7 @@ export class Skycons {
 
   public remove(elementOrId: string | HTMLCanvasElement) {
     const canvas = this.getCanvas(elementOrId);
-    const i = this.list.findIndex(o => o.element === canvas);
+    const i = this.list.findIndex((o) => o.element === canvas);
     if (i >= 0) {
       this.list.splice(i, 1);
     }
@@ -130,7 +130,7 @@ export class Skycons {
 
     const loop = () => {
       const now = Date.now();
-      this.list.forEach(o => this.draw(o, now));
+      this.list.forEach((o) => this.draw(o, now));
       this.interval = requestAnimationFrame(loop);
     };
 
