@@ -12,6 +12,7 @@ export interface IElementColors {
   sleet: string;
   snow: string;
   sun: string;
+  wind: string;
 }
 
 export interface IConstructorOptions {
@@ -66,6 +67,9 @@ export class Skycons {
       sun: monochrome
         ? (color as string)
         : (color as IElementColors).sun || "#FFDC00",
+      wind: monochrome
+        ? (color as string)
+        : (color as IElementColors).wind || "#777",
     };
   }
 

@@ -20,6 +20,7 @@ export function iconWind(
     shorter * STROKE,
     0,
     2,
+    color.wind,
     color.leaf
   );
   swoosh(
@@ -31,6 +32,7 @@ export function iconWind(
     shorter * STROKE,
     1,
     2,
+    color.wind,
     color.leaf
   );
 }
