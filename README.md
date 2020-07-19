@@ -5,7 +5,7 @@
 
 This project is a fork of [Skycons by DarkSky](https://github.com/darkskyapp/skycons). Besides providing type definitions, it has more readable source code and is easier to use within a TypeScript application.
 
-All images and animations are unchanged and were designed by DarkSky.
+Original icons and animations were designed by DarkSky. New icons were copied from [Colored Weather Icons from skycons](https://github.com/maxdow/skycons) by @maxdown.
 
 ## Install
 ```bash

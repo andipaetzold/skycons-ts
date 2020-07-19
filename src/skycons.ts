@@ -5,6 +5,7 @@ import { getIconDrawingFunctionByName, IconKey } from "./icons";
 export interface IElementColors {
   cloud: string;
   fog: string;
+  hail: string;
   leaf: string;
   light_cloud: string;
   moon: string;
@@ -12,6 +13,7 @@ export interface IElementColors {
   sleet: string;
   snow: string;
   sun: string;
+  thunder: string;
   wind: string;
 }
 
@@ -46,6 +48,9 @@ export class Skycons {
       fog: monochrome
         ? (color as string)
         : (color as IElementColors).fog || "#CCC",
+      hail: monochrome
+        ? (color as string)
+        : (color as IElementColors).hail || "#CCF",
       leaf: monochrome
         ? (color as string)
         : (color as IElementColors).leaf || "#2C5228",
@@ -67,9 +72,12 @@ export class Skycons {
       sun: monochrome
         ? (color as string)
         : (color as IElementColors).sun || "#FFDC00",
+      thunder: monochrome
+        ? (color as string)
+        : (color as IElementColors).thunder || "#FFFF00",
       wind: monochrome
         ? (color as string)
-        : (color as IElementColors).wind || "#777",
+        : (color as IElementColors).wind || "#777777",
     };
   }
 
