@@ -21,7 +21,7 @@
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {
-    "prettier": "2.3.2",
+    "prettier": "2.4.1",
     "tslint": "6.1.3",
     "tslint-config-prettier": "1.18.0",
     "typescript": "4.3.5"
