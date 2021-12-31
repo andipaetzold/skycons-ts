@@ -36,48 +36,48 @@ export class Skycons {
   private color: IElementColors;
 
   public constructor(opts: IConstructorOptions = {}) {
-    this.resizeClear = opts.resizeClear || false;
+    this.resizeClear = opts.resizeClear ?? false;
 
-    const color = opts.color || "black";
+    const color = opts.color ?? "black";
     const monochrome = typeof color === "string";
 
     this.color = {
       cloud: monochrome
         ? (color as string)
-        : (color as IElementColors).cloud || "#666",
+        : (color as IElementColors).cloud ?? "#666",
       fog: monochrome
         ? (color as string)
-        : (color as IElementColors).fog || "#CCC",
+        : (color as IElementColors).fog ?? "#CCC",
       hail: monochrome
         ? (color as string)
-        : (color as IElementColors).hail || "#CCF",
+        : (color as IElementColors).hail ?? "#CCF",
       leaf: monochrome
         ? (color as string)
-        : (color as IElementColors).leaf || "#2C5228",
+        : (color as IElementColors).leaf ?? "#2C5228",
       light_cloud: monochrome
         ? (color as string)
-        : (color as IElementColors).light_cloud || "#888",
+        : (color as IElementColors).light_cloud ?? "#888",
       moon: monochrome
         ? (color as string)
-        : (color as IElementColors).moon || "#353545",
+        : (color as IElementColors).moon ?? "#353545",
       rain: monochrome
         ? (color as string)
-        : (color as IElementColors).rain || "#7FDBFF",
+        : (color as IElementColors).rain ?? "#7FDBFF",
       sleet: monochrome
         ? (color as string)
-        : (color as IElementColors).sleet || "#C2EEFF",
+        : (color as IElementColors).sleet ?? "#C2EEFF",
       snow: monochrome
         ? (color as string)
-        : (color as IElementColors).snow || "#C2EEFF",
+        : (color as IElementColors).snow ?? "#C2EEFF",
       sun: monochrome
         ? (color as string)
-        : (color as IElementColors).sun || "#FFDC00",
+        : (color as IElementColors).sun ?? "#FFDC00",
       thunder: monochrome
         ? (color as string)
-        : (color as IElementColors).thunder || "#FFFF00",
+        : (color as IElementColors).thunder ?? "#FFFF00",
       wind: monochrome
         ? (color as string)
-        : (color as IElementColors).wind || "#777777",
+        : (color as IElementColors).wind ?? "#777777",
     };
   }
 
