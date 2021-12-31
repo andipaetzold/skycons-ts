@@ -1,6 +1,8 @@
-[![CircleCI](https://circleci.com/gh/andipaetzold/skycons-ts/tree/master.svg?style=svg)](https://circleci.com/gh/andipaetzold/skycons-ts/tree/master)
-[![Downloads](https://img.shields.io/npm/dm/skycons-ts)](https://www.npmjs.com/package/skycons-ts)
-[![Version](https://img.shields.io/npm/v/skycons-ts.svg)](https://www.npmjs.com/package/skycons-ts)
+[![npm](https://img.shields.io/npm/v/skycons-ts)](https://www.npmjs.com/package/skycons-ts)
+[![downloads](https://img.shields.io/npm/dm/skycons-ts)](https://www.npmjs.com/package/skycons-ts)
+[![npm bundle size](https://img.shields.io/bundlephobia/minzip/skycons-ts)](https://bundlephobia.com/package/skycons-ts)
+[![license](https://img.shields.io/github/license/andipaetzold/skycons-ts)](https://github.com/andipaetzold/skycons-ts/blob/master/LICENSE)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 # Skycons for TypeScript
 
@@ -10,7 +12,7 @@ Original icons and animations were designed by DarkSky. New icons were copied fr
 
 ## Install
 ```bash
-npm install skycons-ts --save
+npm install skycons-ts
 ```
 
 ## Usage
