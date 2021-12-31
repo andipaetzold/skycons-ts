@@ -1,26 +1,18 @@
 {
+    "extends": "@tsconfig/recommended/tsconfig.json",
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
+        "module": "ES2015",
+        "moduleResolution": "Node",
         "declaration": true,
-        "outDir": "./lib",
-        "strict": true,
-        "lib": [
-            "es2015",
-            "dom"
-        ],
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true
+        "outDir": "lib",
+        "plugins": [
+            {
+                "transform": "typescript-transform-extensions",
+                "extensions": {
+                    ".ts": ".js"
+                }
+            }
+        ]
     },
-    "include": [
-        "src"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+    "files": ["src/index.ts"]
 }
