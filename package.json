@@ -11,6 +11,10 @@
         "email": "github@andipaetzold.com",
         "url": "https://github.com/andipaetzold"
     },
+    "bugs": {
+        "url": "https://github.com/andipaetzold/skycons-ts/issues"
+    },
+    "homepage": "https://github.com/andipaetzold/skycons-ts#readme",
     "license": "MIT",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
