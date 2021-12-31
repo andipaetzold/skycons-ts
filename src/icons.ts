@@ -25,89 +25,89 @@ import { iconThunderRainNight } from "./drawing/icons/thunderRainNight";
 import { iconWind } from "./drawing/icons/wind";
 
 export type IconKey =
-  | "clear-day"
-  | "clear-night"
-  | "cloudy"
-  | "fog"
-  | "hail"
-  | "partly-cloudy-day"
-  | "partly-cloudy-night"
-  | "rain"
-  | "rain-snow"
-  | "rain-day"
-  | "rain-night"
-  | "rain-snow-day"
-  | "rain-snow-night"
-  | "sleet"
-  | "snow"
-  | "snow-day"
-  | "snow-night"
-  | "thunder"
-  | "thunder-day"
-  | "thunder-night"
-  | "thunder-rain"
-  | "thunder-rain-day"
-  | "thunder-rain-night"
-  | "wind";
+    | "clear-day"
+    | "clear-night"
+    | "cloudy"
+    | "fog"
+    | "hail"
+    | "partly-cloudy-day"
+    | "partly-cloudy-night"
+    | "rain"
+    | "rain-snow"
+    | "rain-day"
+    | "rain-night"
+    | "rain-snow-day"
+    | "rain-snow-night"
+    | "sleet"
+    | "snow"
+    | "snow-day"
+    | "snow-night"
+    | "thunder"
+    | "thunder-day"
+    | "thunder-night"
+    | "thunder-rain"
+    | "thunder-rain-day"
+    | "thunder-rain-night"
+    | "wind";
 
 export enum ICON {
-  CLEAR_DAY = "clear-day",
-  CLEAR_NIGHT = "clear-night",
-  CLOUDY = "cloudy",
-  FOG = "fog",
-  HAIL = "hail",
-  PARTLY_CLOUDY_DAY = "partly-cloudy-day",
-  PARTLY_CLOUDY_NIGHT = "partly-cloudy-night",
-  RAIN = "rain",
-  RAIN_SNOW = "rain-snow",
-  RAIN_SNOW_DAY = "rain-snow-day",
-  RAIN_SNOW_NIGHT = "rain-snow-day",
-  SHOWERS_DAY = "showers-day",
-  SHOWERS_NIGHT = "showers-night",
-  SLEET = "sleet",
-  SNOW = "snow",
-  SNOW_DAY = "snow-day",
-  SNOW_NIGHT = "snow-night",
-  THUNDER = "thunder",
-  THUNDER_DAY = "thunder-day",
-  THUNDER_NIGHT = "thunder-night",
-  THUNDER_RAIN_DAY = "thunder-day",
-  THUNDER_RAIN_NIGHT = "thunder-night",
-  WIND = "wind",
+    CLEAR_DAY = "clear-day",
+    CLEAR_NIGHT = "clear-night",
+    CLOUDY = "cloudy",
+    FOG = "fog",
+    HAIL = "hail",
+    PARTLY_CLOUDY_DAY = "partly-cloudy-day",
+    PARTLY_CLOUDY_NIGHT = "partly-cloudy-night",
+    RAIN = "rain",
+    RAIN_SNOW = "rain-snow",
+    RAIN_SNOW_DAY = "rain-snow-day",
+    RAIN_SNOW_NIGHT = "rain-snow-day",
+    SHOWERS_DAY = "showers-day",
+    SHOWERS_NIGHT = "showers-night",
+    SLEET = "sleet",
+    SNOW = "snow",
+    SNOW_DAY = "snow-day",
+    SNOW_NIGHT = "snow-night",
+    THUNDER = "thunder",
+    THUNDER_DAY = "thunder-day",
+    THUNDER_NIGHT = "thunder-night",
+    THUNDER_RAIN_DAY = "thunder-day",
+    THUNDER_RAIN_NIGHT = "thunder-night",
+    WIND = "wind",
 }
 
 const iconDrawFunctionMap = new Map<IconKey, DrawFunction>([
-  ["clear-day", iconClearDay],
-  ["clear-night", iconClearNight],
-  ["cloudy", iconCloudy],
-  ["fog", iconFog],
-  ["hail", iconHail],
-  ["partly-cloudy-day", iconPartlyCloudyDay],
-  ["partly-cloudy-night", iconPartlyCloudyNight],
-  ["rain", iconRain],
-  ["rain-day", iconRainDay],
-  ["rain-night", iconRainNight],
-  ["rain-snow", iconRainSnow],
-  ["rain-snow-day", iconRainSnowDay],
-  ["rain-snow-night", iconRainSnowNight],
-  ["sleet", iconSleet],
-  ["snow", iconSnow],
-  ["snow-day", iconSnowDay],
-  ["snow-night", iconSnowNight],
-  ["thunder", iconThunder],
-  ["thunder-day", iconThunderDay],
-  ["thunder-night", iconThunderNight],
-  ["thunder-rain", iconThunderRain],
-  ["thunder-rain-day", iconThunderRainDay],
-  ["thunder-rain-night", iconThunderRainNight],
-  ["wind", iconWind],
+    ["clear-day", iconClearDay],
+    ["clear-night", iconClearNight],
+    ["cloudy", iconCloudy],
+    ["fog", iconFog],
+    ["hail", iconHail],
+    ["partly-cloudy-day", iconPartlyCloudyDay],
+    ["partly-cloudy-night", iconPartlyCloudyNight],
+    ["rain", iconRain],
+    ["rain-day", iconRainDay],
+    ["rain-night", iconRainNight],
+    ["rain-snow", iconRainSnow],
+    ["rain-snow-day", iconRainSnowDay],
+    ["rain-snow-night", iconRainSnowNight],
+    ["sleet", iconSleet],
+    ["snow", iconSnow],
+    ["snow-day", iconSnowDay],
+    ["snow-night", iconSnowNight],
+    ["thunder", iconThunder],
+    ["thunder-day", iconThunderDay],
+    ["thunder-night", iconThunderNight],
+    ["thunder-rain", iconThunderRain],
+    ["thunder-rain-day", iconThunderRainDay],
+    ["thunder-rain-night", iconThunderRainNight],
+    ["wind", iconWind],
 ]);
 
 export function getIconDrawingFunctionByName(key: IconKey): DrawFunction {
-  const drawFn = iconDrawFunctionMap.get(key);
-  if (drawFn) {
-    return drawFn;
-  } else {
-    throw new Error(`Invalid icon '${key}'.`);
-  }
+    const drawFn = iconDrawFunctionMap.get(key);
+    if (drawFn) {
+        return drawFn;
+    } else {
+        throw new Error(`Invalid icon '${key}'.`);
+    }
 }
